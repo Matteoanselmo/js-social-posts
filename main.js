@@ -136,7 +136,7 @@ const likeBtn = document.getElementsByClassName('likes__cta');
 let miPiace = document.getElementsByClassName('like-button');
 for(let i = 0; i < posts.length; i++){
     likeBtn[i].addEventListener('click' , function(){
-        miPiace[i].classList.add('like-blu');
+        miPiace[i].classList.toggle('like-blu');
         posts[i].likes += 1;
         document.getElementById(`like-counter-${posts[i].id}`).innerHTML = posts[i].likes;
     })
